@@ -6,3 +6,4 @@ from .models import *
 
 admin.site.register(Tutor)
 admin.site.register(Tutor_infor)
+

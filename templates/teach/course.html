@@ -8,25 +8,35 @@
 <div class="profile-area" style="padding-top: 20px;padding-bottom: 20px;">
   <div class="container">
     <div class="row">
-      {% for i in Tutor %}
-      <div class="col-md-4" style="padding-top: 20px;">
+
+      <div class="col-md-4" style="padding-top: 10px;">
         <div class="card" style="width: 18rem;">
-          <img src="/static/tech_upload/{{i.pic}}" class="card-img-top" alt="profile..." style="height: 150px;width: auto;">
+          <img src="/static/tech_upload/{{Tutor.pic}}" class="card-img-top" alt="profile..." style="height: 150px;width: auto;">
           <div class="card-body">
-            <h5 class="card-title">{{i.place_name}}</h5>
-            <p class="card-text">{{i.location}}<br>{{i.id}}</p>
+            <h5 class="card-title">{{Tutor.place_name}}</h5>
+            <p class="card-text">{{Tutor.location}}<br></p>
             
             <div class="modal-footer">
-              <a href="{% url 'enroll'%}"  id={{i.id}} class="btn btn-primary" name={{i.id}} >Enroll  </a>
+              <a href="{% url 'enroll'%}"  id={{Tutor.id}} class="btn btn-primary"  >Enroll  </a>
             </div>
-           
-            
- 
-            
           </div>
         </div>
       </div>
-      {% endfor %}
+
+      <div class="col-md-4" style="padding-top: 10px;">
+        <div class="card" style="width: 18rem;">
+          <img src="/static/tech_upload/{{Tutor1.pic}}" class="card-img-top" alt="profile..." style="height: 150px;width: auto;">
+          <div class="card-body">
+            <h5 class="card-title">{{Tutor1.place_name}}</h5>
+            <p class="card-text">{{Tutor1.location}}<br></p>
+            
+            <div class="modal-footer">
+              <a href="{% url 'enroll2'%}"  id={{Tutor1.id}} class="btn btn-primary"  >Enroll  </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
   {% endblock %}
